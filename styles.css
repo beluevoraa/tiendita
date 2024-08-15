@@ -1,0 +1,265 @@
+:root {
+    --gray : #F0F0F0;
+    --coral: #FFABAB;
+    --celeste: #AEDFF7;
+    --lavender: #E0BBE4;
+    --lilac: #e4d9ff;
+    --amarillo:  #FFF9C4;
+    --mint: #B2F2BB;
+    --rosa: #FFC1CC;
+    --blanco: #fff;
+    --negro: #000;
+    --cloud: #fffeed;
+    --peach: #ffbfb7;
+
+
+--fuente: 'outfit', sans-serif;    
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /* Globales */
+  body {
+    background-color: var(--cloud);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'outfit';
+ }
+
+  p {
+    font-size: 1.8rem;
+    color: var(--lavender);
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  img {
+  width: 100%;
+  }
+
+  .container {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+    font-family: var(--fuente);
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: 1 0;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3{
+    font-size: 2.4rem;
+  }
+
+  /* header */
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__logo {
+    margin: 3rem 0;
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    max-width: 100%;
+  }
+
+  /* navegacion */
+  .nav {
+    background-color: #fff4eb;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .nav__enlace {
+    color: var(--lavender);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .nav__enlace:last-of-type{
+    margin-right: 0;
+  }
+  .nav__enlace:hover, 
+  .nav__enlace--activo {
+    color: var(--negro);
+  }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;}
+
+@media (min-width: 768px) {
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+  /* Productos */
+ .product {
+  background-color: rgb(254, 247, 233);
+  padding: 1rem;
+ }
+
+  .product__name,
+  .product__price  {
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+  }
+.product__price {
+  color: var(--coral);
+}
+  /* Gráficos */
+ .graphic{
+  min-height: 30rem;
+  background-size: cover;
+  grid-column: 1/3;
+
+
+ }
+ 
+  .graphic--bday {
+    grid-row: 2/3;
+    background-image: url(img/img2.jpeg);
+ }
+
+  .graphic--flowers {
+    background-image: url(img/bee.jpeg);
+    grid-row: 4 / 5;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    }
+
+
+ @media (min-width: 768px) {
+  .graphic--flowers{
+    grid-row: 4 / 5;
+    grid-column: 2 / 4;
+   }
+ }
+
+ 
+/* Nosotros */
+  .us{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+
+  }
+
+  @media (min-width: 768px) {
+    .us {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+ }}
+  
+
+  .us__img {
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+
+
+  @media (min-width: 768px) {
+    .us__img {
+      grid-column: 2 / 3;
+    }
+  }
+/* Footer */
+.footer {
+  background-color: #fff4eb;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.footer__texto {
+text-align: center;
+text-transform: uppercase;
+font-size: 1.6rem;
+}
+
+/* Bloques */
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+
+.bloque {
+  text-align: center;
+}
+
+.bloque__title {
+  margin: 0;
+}
+
+/* Producto */
+@media (min-width: 768px) {
+.producto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+}
+
+.form{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.form__campo {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: var(--peach);
+  font-size: 1.8rem;
+}
+
+::placeholder{
+  color: var(--coral);
+}
+.form__submit{
+  background-color: var(--lilac);
+  border: none;
+  font-size: 2rem;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background-color .5s ease;
+  grid-column: 1 / 3;
+}
+
+.form__submit:hover{
+  cursor: pointer;
+  background-color: var(--celeste);
+}
