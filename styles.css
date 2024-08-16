@@ -227,12 +227,15 @@ font-size: 1.6rem;
 }
 
 /* Producto */
-@media (min-width: 768px) {
+
 .producto {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.producto__img {
+  width: 500px;
 }
 
 .form{
