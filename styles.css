@@ -188,10 +188,14 @@ html {
     width: 100%;
   }
 
+  .us__text {
+   text-align: justify;
+  }
 
   @media (min-width: 768px) {
     .us__img {
       grid-column: 2 / 3;
+      width: 450px;
     }
   }
 /* Footer */
